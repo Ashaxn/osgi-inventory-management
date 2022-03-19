@@ -1,0 +1,32 @@
+package accessories;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+
+public class Activator implements BundleActivator {
+
+	ServiceRegistration serviceRegistration;
+
+	public void start(BundleContext bundleContext) throws Exception {
+		 final ServiceAccessories serviceaccessories = new ServiceAccessoriesImpl();
+	        this.serviceRegistration = bundleContext.registerService(ServiceAccessories.class.getName(), (Object)serviceaccessories, null);
+	System.out.println();
+	System.out.println("######################################");
+	System.out.println("###      Clothing Accessories      ###");
+	System.out.println("###     Stock Status : In Stock    ###");
+	System.out.println("######################################");
+	System.out.println();
+	}
+
+	public void stop(BundleContext bundleContext) throws Exception {
+		this.serviceRegistration.unregister();
+		System.out.println();
+		System.out.println("######################################");
+		System.out.println("###      Clothing Accessories      ###");
+		System.out.println("###   Stock Status : Out of Stock  ###");
+		System.out.println("######################################");
+		System.out.println();
+	}
+
+}

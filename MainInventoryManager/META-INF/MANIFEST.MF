@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MainInventoryManager
+Bundle-SymbolicName: MainInventoryManager
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: maininventorymanager.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: MainInventoryManager
+Import-Package: accessories,
+ clothingprofitcalculator,
+ kidsclothing,
+ mensclothing,
+ org.osgi.framework;version="1.3.0",
+ womensclothing
+Bundle-ActivationPolicy: lazy

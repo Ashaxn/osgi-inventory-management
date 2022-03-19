@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MensClothingInventoryManager
+Bundle-SymbolicName: MensClothingInventoryManager
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: mensclothinginventorymanager.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: MensClothingInventoryManager
+Import-Package: clothingprofitcalculator,
+ mensclothing,
+ org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
